@@ -155,15 +155,15 @@
   {% if not ddocs %}
     <!-- no discussion -->
   {% else %}
-    <div class="section page--discussion_main">
+    {#<div class="section page--discussion_main">
       <div class="section__header">
         <h1 class="section__title">{{ _('Discussion') }}</h1>
       </div>
       {% include "partials/discussion_list.html" %}
-    </div>
+    </div>#}
   {% endif %}
   </div>
-  <div class="large-3 columns">
+  {#<div class="large-3 columns">
   {% if handler.has_perm(vj4.model.builtin.PERM_VIEW_DISCUSSION) %}
     {% include 'discussion_nodes_widget.html' %}
   {% endif %}
@@ -200,6 +200,6 @@
       </ul></div>
     </div>
   {% endif %}
-  </div>
+  </div>#}
 </div>
 {% endblock %}

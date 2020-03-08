@@ -36,11 +36,11 @@
         {%- for row in rows[1:] -%}
         {% if row[1]['raw']['uname'] == handler.user['uname'] %}
           <tr>
-            <td class="col--{{ rows[0][0]['type'] }}">
+            <!-- <td class="col--{{ rows[0][0]['type'] }}">
               {{ 1|nl2br }}
-            </td>
-            {%- for column in row[1:] -%}
-              <td class="col--{{ rows[0][loop.index0+1]['type'] }}">
+            </td> -->
+            {%- for column in row -%}
+              <td class="col--{{ rows[0][loop.index0]['type'] }}">
               {% if column['type'] == 'user' %}
                 {{ user.render_inline(column['raw'], badge=false) }}
               {% elif column['type'] == 'record' %}

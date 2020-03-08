@@ -4,7 +4,8 @@
     <div class="media">
       <div class="media__body">
         <div class="location-path">
-        {% for c in path_components %}
+            / <a href="{{path_components[0][1]}}">SDU</a>
+        {% for c in path_components[1:] %}
           / {% if c[1] %}<a href="{{ c[1] }}">{{ c[0] }}</a>{% endif %}
         {%- endfor %}
         </div>
